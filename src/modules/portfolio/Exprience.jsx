@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import { useScroll, motion } from 'framer-motion';
 import LiIcon from './LiIcon';
 
-const Details = ({ projectName, position, company, companyLink, time, workList }) => {
+const Details = ({ projectName, position, company, companyLink, time, description, teamSize, workList, technologies }) => {
   const ref = useRef(null);
   return (
     <li ref={ref} className='my-8 first:mt-0 last:mb-0 w-[65%] mx-auto flex flex-col items-center justify-between md:w-[80%]'>
@@ -17,14 +17,29 @@ const Details = ({ projectName, position, company, companyLink, time, workList }
           {position} | <a href={companyLink} target='_blank' className='text-primary dark:text-primaryDark capitalize'>@{company}</a>
         </span>
         <span className='capitalize text-sm text-dark/75 dark:text-light/75 my-1.5'>{time}</span>
-        {
-          workList && workList.map((item, index) => (
-            <span key={index} className='flex items-start'>
-              <span className='font-medium text-primary dark:text-primaryDark md:text-sm'>&#9758;</span> &nbsp;
-              <p className='font-base md:text-sm'>{item}</p>
-            </span>
-          ))
-        }
+        <span>
+          <b>Description Project: </b>
+          <span>{description}</span>
+        </span>
+        <span>
+          <b>Team size: </b>
+          <span>{teamSize}</span>
+        </span>
+        <span>
+          <b>Roles and Responsibilities in the projects:</b>
+          {
+            workList && workList.map((item, index) => (
+              <span key={index} className='flex items-start'>
+                <span className='font-medium text-primary dark:text-primaryDark md:text-sm'>&#9758;</span> &nbsp;
+                <p className='font-base md:text-sm'>{item}</p>
+              </span>
+            ))
+          }
+        </span>
+        <span>
+          <b>Technologies: </b>
+          <span>{technologies}</span>
+        </span>
       </motion.div>
     </li>
   )
@@ -39,8 +54,8 @@ const Exprience = (props) => {
 
   return (
     <div className="my-48">
-      <h2 className='font-bold text-8xl mb-24 w-full text-center md:text-6xl md:mb-16 xs:text-4xl'>Experience</h2>
-      <div ref={ref} className='w-[75%] mx-auto relative lg:w-[90%] md:w-full'>
+      <h2 className='font-bold text-8xl mb-24 w-full text-center md:text-6xl md:mb-16 xs:text-4xl'>Experiences</h2>
+      <div ref={ref} className='w-[85%] mx-auto relative lg:w-[75%] md:w-full'>
         <motion.div
           style={{ scaleY: scrollYProgress }}
           className='
@@ -53,13 +68,15 @@ const Exprience = (props) => {
 
           '
         />
-        <ul className=' w-full flex flex-col items-start justify-between ml-4 xs:ml-2'>
+        <ul className='w-full flex flex-col items-start justify-between ml-4 xs:ml-2'>
           <Details
             projectName='Education Managment Project'
             position="Front-end Developer"
             company="DigiTech Solutions CO., LTD"
             companyLink="https://vndigitech.com"
             time="06/2022 - present"
+            description="Edu management system for learners, businesses, and teachers with both online courses and offline training course, moodle-learning system."
+            teamSize="6"
             workList={[
               "Maintenance of the older features.",
               "Optimize the performance of the website.",
@@ -69,6 +86,7 @@ const Exprience = (props) => {
               "Review source code submitted by other members of team before merging into main branch.",
               "Deployment for the production stage with Docker.",
             ]}
+            technologies="NextJS, Redux, Redux-Saga, Formik, Web Cookie, Local Storage, HTML/CSS, Material UI, AntDesign, Responsive, API, Docker, Google/Facebook OAuth, Github, Agile, Integrate with AlePay"
           />
           <Details
             projectName='Omnichannel Project'
@@ -76,12 +94,15 @@ const Exprience = (props) => {
             company="DigiTech Solutions CO., LTD"
             companyLink="https://vndigitech.com"
             time="7/2023 - Present"
+            description="Customer care and management channels across integration with multiple channels like fanpage Facebook, Zalo, and chatbot website."
+            teamSize="5"
             workList={[
               "Integrate with fanpage Facebook, Zalo to get and send messages of customers, send zalo ZNS.",
               "Integrate with ChatGPT, ChatGPT training with specific scenarios according to business requirements.",
               "Setup Docker for the development environment, setup Dockerfile for staging, production building.  ",
               "Planning, breaking down features and estimating for each task.",
             ]}
+            technologies="NextJS, UmiJS, Redux, Redux Saga, Formik, Yup, Web Cookie, Local Storage, Html/CSS, Material UI, AntDesign, Responsive, API, Docker, Google/Facebook OAuth, Github, OpenProject, Agile, Alepay, Integrate with Zalo & Facebook, firebase"
           />
           <Details
             projectName='DMS Project'
@@ -89,11 +110,14 @@ const Exprience = (props) => {
             company="DigiTech Solutions CO., LTD"
             companyLink="https://vndigitech.com"
             time="9/2021 - 5/2023"
+            description="Supply chain management system from Distributors to Customer Shipto. Including more systems: Items, Routezone, Customer, Distributor, Purchase Orders, Sale orders, Inventory, ..."
+            teamSize="More than 10"
             workList={[
               "Development for many modules of large projects, microservices, business logic, and component UI for front-end applications.",
               "Communication with PO, BA to make clear and make Q/A about requirements.",
               "Planning, breaking down features and estimating for each task.",
             ]}
+            technologies=".NET Core, Blazor, Docker, Html/CSS, Responsive, API, Docker, Github, OpenProject, Agile"
           />
         </ul>
       </div>
