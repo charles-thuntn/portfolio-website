@@ -5,8 +5,7 @@ import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
 import useThemeSwitcher from '@/common/hooks/useThemeSwitcher';
 import { GithubIcon, LinkedInIcon, MoonIcon, PhoneIcon, SunIcon } from './Icons';
-import { numberphone, url_github, url_linkedIn } from '../utils/constants';
-// import { GithubIcon, LinkedInIcon, MoonIcon, PhoneIcon, SunIcon } from '@/components/Icons';
+import { url_github, url_linkedIn } from '../utils/constants';
 
 const CustomLink = ({ href, title, className = "" }) => {
   const router = useRouter();
@@ -82,16 +81,12 @@ const NavBar = () => {
       <div className='w-full flex justify-between items-center lg:hidden'>
         <nav>
           <CustomLink href="/" title="Home" className='mr-4' />
-          <CustomLink href="/about" title="Experience" className='mx-4' />
-          {/* <CustomLink href="/domain" title="Domain" className='ml-4' /> */}
+          <CustomLink href="/portfolio" title="Portfolio" className='mx-4' />
         </nav>
         <nav className='flex items-center justify-center flex-wrap'>
-        <CustomSocial href={url_github} target={"_blank"} className='w-6 mx-3 bg-light dark:bg-dark rounded-full' component={<GithubIcon />} />
-        <CustomSocial href={url_linkedIn} target={"_blank"} className='w-6 mx-3' component={<LinkedInIcon />} />
-          <motion.div whileHover={{ y: -2 }} whileTap={{ scale: 0.7 }} className='mx-3 w-[24px] h-[24px] rounded bg-light dark:bg-none border-dark dark:border-none border-2 flex justify-center items-center p-0.5'>
-            <CustomSocial href={`tel:${numberphone}`} target={"_blank"} className='w-6 mx-3 text-dark dark:text-dark' component={<PhoneIcon />} />
-          </motion.div>
-
+          <CustomSocial href={url_github} target={"_blank"} className='w-6 mx-3 bg-light dark:bg-dark rounded-full' component={<GithubIcon />} />
+          <CustomSocial href={url_linkedIn} target={"_blank"} className='w-6 mx-3' component={<LinkedInIcon />} />
+          {/* <CustomSocial href={`tel:${numberphone}`} target={"_blank"} className='mx-3 w-6 rounded  border-dark/90 dark:border-light bg-light dark:bg-dark text-dark dark:text-light border-2 flex justify-center items-center p-1' component={<PhoneIcon />} /> */}
           <button
             className={`ml-3 flex items-center justify-center rounded-full p-1 ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}`}
             onClick={() => setMode(mode === "light" ? "dark" : "light")}
@@ -114,15 +109,13 @@ const NavBar = () => {
         >
           <nav className='flex flex-col items-center justify-center'>
             <CustomMobileLink href="/" title="Home" className='' toggle={handleClick} />
-            <CustomMobileLink href="/about" title="Experience" className='' toggle={handleClick} />
+            <CustomMobileLink href="/portfolio" title="Portfolio" className='' toggle={handleClick} />
           </nav>
 
           <nav className='flex items-center justify-center flex-wrap'>
             <CustomSocial href={url_github} target={"_blank"} className='w-6 mx-3 bg-light dark:bg-dark text-dark dark:text-light rounded-full sm:mx-1' component={<GithubIcon />} />
             <CustomSocial href={url_linkedIn} target={"_blank"} className='w-6 mx-3' component={<LinkedInIcon />} />
-            <motion.div whileHover={{ y: -2 }} whileTap={{ scale: 0.7 }} className='mx-3 w-[24px] h-[24px] rounded  dark:border-dark dark:bg-light  border-2 flex justify-center items-center p-1'>
-              <a href={`tel:${numberphone}`}><PhoneIcon className={`dark:text-dark text-light`} /></a>
-            </motion.div>
+            {/* <CustomSocial href={`tel:${numberphone}`} target={"_blank"} className='mx-3 w-6 rounded  border-light dark:border-dark/90 bg-dark dark:bg-light text-light dark:text-dark border-2 flex justify-center items-center p-1' component={<PhoneIcon />} /> */}
             <button
               className={`ml-3 flex items-center justify-center rounded-full p-1 ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}`}
               onClick={() => setMode(mode === "light" ? "dark" : "light")}

@@ -8,7 +8,7 @@ import AnimatedText from '@/common/components/AnimatedText'
 import AnimatedTransitionPage from '@/common/components/AnimatedTransitionPage'
 import HireMe from '@/modules/home/HireMe'
 import { LinkArrow } from '@/common/components/Icons'
-import { email } from '@/common/utils/constants'
+import { email, name_resume } from '@/common/utils/constants'
 
 export default function Home() {
   return (
@@ -41,7 +41,7 @@ export default function Home() {
                 showcasing my expertise in React.js and web development.
               </p>
               <div className='flex items-center self-start mt-2 lg:self-center'>
-                <Link href="/Resume-Thu-Nguyen.pdf" target={"_blank"}
+                <Link href="/Resume.pdf" target={"_blank"}
                   className='
                     flex items-center 
                     bg-dark dark:bg-light 
@@ -51,7 +51,7 @@ export default function Home() {
                     hover:bg-light hover:dark:bg-dark hover:text-dark hover:dark:text-light hover:border-dark hover:dark:border-light
                     md:p-2 md:px-4 md:text-base
                   '
-                  download={true}
+                  download={`${name_resume}`}
                 >
                   Resume <LinkArrow className={'w-6 ml-1'} />
                 </Link>

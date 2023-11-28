@@ -6,21 +6,21 @@ import Layout from '@/common/components/Layout'
 import AnimatedText from '@/common/components/AnimatedText'
 import AnimatedNumber from '@/common/components/AnimatedNumber'
 import AnimatedTransitionPage from '@/common/components/AnimatedTransitionPage'
-import Skills from '@/modules/about/Skills'
-import Exprience from '@/modules/about/Exprience'
-import Education from '@/modules/about/Education'
+import Skills from '@/modules/portfolio/Skills'
+import Exprience from '@/modules/portfolio/Exprience'
+import Education from '@/modules/portfolio/Education'
 
-const about = () => {
+const portfolio = () => {
   return (
     <>
       <Head>
-        <title>Thu Nguyen | About me</title>
-        <meta name="description" content="Thu Nguyen | About me" />
+        <title>Thu Nguyen | Portfolio</title>
+        <meta name="description" content="Thu Nguyen | Portfolio" />
       </Head>
       <AnimatedTransitionPage />
       <main className='flex w-full flex-col items-center justify-center dark:text-light'>
         <Layout className='pt-6'>
-          <AnimatedText text="Passion Fuels Purpose!" className='mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8' />
+          <AnimatedText text="Passion Powers All !" className='mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8' />
           <div className='grid w-full grid-cols-8 gap-16 sm:gap-8'>
             <div className='col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2 md:col-span-8'>
               <h2 className='mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75'>Biography</h2>
@@ -88,4 +88,4 @@ const about = () => {
   )
 }
 
-export default about
+export default portfolio

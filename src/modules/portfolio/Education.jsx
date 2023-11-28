@@ -55,7 +55,7 @@ const Education = (props) => {
             type="Engineer's degree, Information Technology"
             time="September 2017 - April 2021"
             place="Ho Chi Minh City University of Industry and Trade (HUIT)"
-            infoList={["Diploma:  Good type | Grade: 3.20/4.00"]}
+            infoList={["Diploma:  Good | Grade: 3.20/4.00"]}
           />
           <Details
             type="Digitech Training Program "
