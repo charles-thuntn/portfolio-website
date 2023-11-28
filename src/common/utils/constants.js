@@ -5,3 +5,5 @@ export const numberphone = "0326217691";
 export const email = "nthu240@gmail.com";
 export const name_resume = "Resume-Thu-Nguyen";
 export const design_by_footer = "Thu Nguyen";
+export const number_project = 10
+export const years_experience = 3

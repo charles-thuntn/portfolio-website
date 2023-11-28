@@ -9,6 +9,7 @@ import AnimatedTransitionPage from '@/common/components/AnimatedTransitionPage'
 import Skills from '@/modules/portfolio/Skills'
 import Exprience from '@/modules/portfolio/Exprience'
 import Education from '@/modules/portfolio/Education'
+import { number_project, years_experience } from '@/common/utils/constants'
 
 const portfolio = () => {
   return (
@@ -55,24 +56,24 @@ const portfolio = () => {
                 "/>
             </div>
 
-            <div className='col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row xl:items-center md:order-3'>
-              <div className='flex flex-col items-end justify-center xl:items-center'>
+            <div className='col-span-2 flex flex-col items-end xl:justify-between xl:col-span-8 xl:flex-row xl:items-center md:order-3'>
+              {/* <div className='flex flex-col items-end justify-center xl:items-center'>
                 <span className='inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl'>
                   <AnimatedNumber value={10} />+
                 </span>
                 <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base'>satisfied clients</h2>
-              </div>
+              </div> */}
 
               <div className='flex flex-col items-end justify-center xl:items-center'>
                 <span className='inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl'>
-                  <AnimatedNumber value={20} />+
+                  <AnimatedNumber value={number_project} />+
                 </span>
                 <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base'>projects completed</h2>
               </div>
 
-              <div className='flex flex-col items-end justify-center xl:items-center'>
+              <div className='flex flex-col items-end justify-center xl:items-center mt-16 xl:mt-0'>
                 <span className='inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl'>
-                  <AnimatedNumber value={3} />+
+                  <AnimatedNumber value={years_experience} />+
                 </span>
                 <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base'>years of experience</h2>
               </div>
