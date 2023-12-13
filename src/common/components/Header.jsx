@@ -60,7 +60,7 @@ const CustomSocial = ({ href, component, target, className = "" }) => {
   )
 }
 
-const NavBar = () => {
+const Header = () => {
   const [mode, setMode] = useThemeSwitcher();
   const [isOpenMenu, setIsOpenMenu] = useState(false);
 
@@ -82,6 +82,7 @@ const NavBar = () => {
         <nav>
           <CustomLink href="/" title="Home" className='mr-4' />
           <CustomLink href="/portfolio" title="Portfolio" className='mx-4' />
+          {/* <CustomLink href="/projects" title="Projects" className='ml-4' /> */}
         </nav>
         <nav className='flex items-center justify-center flex-wrap'>
           <CustomSocial href={url_github} target={"_blank"} className='w-6 mx-3 bg-light dark:bg-dark rounded-full' component={<GithubIcon />} />
@@ -112,7 +113,7 @@ const NavBar = () => {
             <CustomMobileLink href="/portfolio" title="Portfolio" className='' toggle={handleClick} />
           </nav>
 
-          <nav className='flex items-center justify-center flex-wrap'>
+          <nav className='flex items-center justify-center flex-wrap mt-2'>
             <CustomSocial href={url_github} target={"_blank"} className='w-6 mx-3 bg-light dark:bg-dark text-dark dark:text-light rounded-full sm:mx-1' component={<GithubIcon />} />
             <CustomSocial href={url_linkedIn} target={"_blank"} className='w-6 mx-3' component={<LinkedInIcon />} />
             {/* <CustomSocial href={`tel:${numberphone}`} target={"_blank"} className='mx-3 w-6 rounded  border-light dark:border-dark/90 bg-dark dark:bg-light text-light dark:text-dark border-2 flex justify-center items-center p-1' component={<PhoneIcon />} /> */}
@@ -137,4 +138,4 @@ const NavBar = () => {
   )
 }
 
-export default NavBar
+export default Header
