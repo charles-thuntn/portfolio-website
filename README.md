@@ -1,6 +1,6 @@
 <h2 align="center">
   My Portfolio Website<br/>
-  <a href="https://charlesnguyen.vercel.app/" target="_blank">charlesnguyen.portfolio</a>
+  <a href="https://thuntn.vercel.app/" target="_blank">thuntn.portfolio</a>
 </h2>
 <div align="center">
   <img alt="Demo" src="./public/images/images-website/hompage.png" />
@@ -10,7 +10,7 @@
 
 ## Built With
 
-My personal portfolio <a href="https://charlesnguyen.vercel.app/" target="_blank">charlesnguyen.portfolio</a> which includes my resume and technical skills.<br/>
+My personal portfolio <a href="https://thuntn.vercel.app/" target="_blank">thuntn.portfolio</a> which includes my resume and technical skills.<br/>
 
 This project was built using these technologies.
 
