@@ -4,12 +4,12 @@ import React from 'react'
 import profilePic from '../../public/images/profile/developer-pic-2.jpg'
 import Layout from '@/common/components/Layout'
 import AnimatedText from '@/common/components/AnimatedText'
-import AnimatedNumber from '@/common/components/AnimatedNumber'
+// import AnimatedNumber from '@/common/components/AnimatedNumber'
 import AnimatedTransitionPage from '@/common/components/AnimatedTransitionPage'
 import Skills from '@/modules/portfolio/Skills'
 import Exprience from '@/modules/portfolio/Exprience'
 import Education from '@/modules/portfolio/Education'
-import { number_project, years_experience } from '@/common/utils/constants'
+// import { number_project, years_experience } from '@/common/utils/constants'
 
 const portfolio = () => {
   return (
@@ -23,13 +23,14 @@ const portfolio = () => {
         <Layout className='pt-6'>
           <AnimatedText text="Passion Powers All !" className='mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8' />
           <div className='grid w-full grid-cols-8 gap-16 sm:gap-8'>
+            <div className='col-span-1 xl:hidden md:hidden'></div>
             <div className='col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2 md:col-span-8'>
               <h2 className='mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75'>Biography</h2>
               <p className='font-medium'>
-                {`I'm a Frontend Developer. With many years of studying and working in this field, I am confident that I can handle any assigned task. I have 3 years of experience in programming with strong knowledge of Web apps such as (ReactJS,  NextJS, UmiJS, .NET Core, and some projects using VueJS).`}
+                I{`'`}m a <b>Frontend Developer</b>. With many years of studying and working in this field, I am confident that I can handle any assigned task. I have <b>3 years of experience</b> in programming with strong knowledge of Web apps such as {`(`}<b>ReactJS,  NextJS, UmiJS, .NET Core,</b> and some projects using <b>VueJS</b>{`).`}
               </p>
               <p className='my-4 font-medium'>
-                With knowledge of UI/UX design, I have the ability to develop responsive web applications for Mobile Devices, Tablets, and Desktops in a flexible way. Create the best user experience for users. I also spend time learning new technologies and best practices to become a better engineer.
+                With knowledge of <b>UI/UX design</b>, I have the ability to develop responsive web applications for <b>Mobile Devices, Tablets, and Desktops</b> in a flexible way. Create the best user experience for users. I also spend time learning new technologies and best practices to become a better engineer.
               </p>
             </div>
 
@@ -55,14 +56,14 @@ const portfolio = () => {
                   33vw
                 "/>
             </div>
-
-            <div className='col-span-2 flex flex-col items-end xl:justify-between xl:col-span-8 xl:flex-row xl:items-center md:order-3'>
-              {/* <div className='flex flex-col items-end justify-center xl:items-center'>
+            <div className='col-span-1 xl:hidden md:hidden'></div>
+            {/* <div className='col-span-2 flex flex-col items-end xl:justify-between xl:col-span-8 xl:flex-row xl:items-center md:order-3'>
+              <div className='flex flex-col items-end justify-center xl:items-center'>
                 <span className='inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl'>
                   <AnimatedNumber value={10} />+
                 </span>
                 <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base'>satisfied clients</h2>
-              </div> */}
+              </div>
 
               <div className='flex flex-col items-end justify-center xl:items-center'>
                 <span className='inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl'>
@@ -77,7 +78,7 @@ const portfolio = () => {
                 </span>
                 <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base'>years of experience</h2>
               </div>
-            </div>
+            </div> */}
 
           </div>
           <Skills />
