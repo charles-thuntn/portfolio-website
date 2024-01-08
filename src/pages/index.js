@@ -25,7 +25,7 @@ export default function Home() {
               <Image
                 src={profilePic}
                 alt='picture-representation'
-                className='w-full h-auto pr-16 lg:hidden md:inline-block md:w-full md:pr-0 md:pb-4'
+                className='w-auto h-full max-h-screen p-2 lg:hidden md:inline-block md:w-full md:h-auto md:pr-0 md:pb-4'
                 priority
                 sizes="
                   (max-width: 768px) 100vw,
