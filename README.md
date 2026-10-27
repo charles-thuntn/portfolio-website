@@ -27,6 +27,7 @@ This project was built using these technologies.
 **📦 Images have been optimized**
 
 **📱 Fully Responsive**
+1111
 
 ## Getting Started
 
