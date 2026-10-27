@@ -46,3 +46,4 @@ The page will reload if you make edits.
 
 Open the project folder and Navigate to `/src/pages/`. <br/>
 You will find all the pages used and you can edit your information accordingly.
+Hello everyone ^.^
