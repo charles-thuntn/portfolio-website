@@ -104,7 +104,7 @@ const projects = () => {
               imageWebsite={projectImg}
               typeWebsite="Portfolio Website"
               nameWebsite="NextJS Portfolio Website"
-              description="A professional portfolio website using Next, Framer-motion, and Styled-components. It has smooth page transitions, cool background effects, unique design and it is mobile responsive."
+              description="A professional portfolio website using Next JS, Framer-motion, and Styled-components. It has smooth page transitions, cool background effects, unique design and it is mobile responsive."
               linkWebsite="/"
               linkGithub="https://github.com/charles-thuntn/portfolio-website"
             />
